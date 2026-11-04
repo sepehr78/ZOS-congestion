@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zos-congestion"
+version = "1.0.0"
+description = "Zeroth-Order Stackelberg Control in Combinatorial Congestion Games (NeurIPS 2026)"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+# Pinned to the environment that produced the paper's results.
+dependencies = [
+    "graphillion==2.1",
+    "networkx==3.6.1",
+    "numba==0.63.1",
+    "numpy==2.3.5",
+    "scipy==1.16.2",
+]
+
+[project.optional-dependencies]
+test = ["pytest==8.4.2"]
+
+[tool.setuptools]
+packages = ["zos"]
+
+[tool.setuptools.package-data]
+zos = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
