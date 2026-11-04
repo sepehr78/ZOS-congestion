@@ -8,7 +8,7 @@ Phi_T(theta_k), k = 0..3) of three runs from the rebuttal / camera-ready experim
 * s3_hl: Scenario 3, HL sampled LMO, m = 1000, seed 6000000 (ZOS-HL-m1000, runtime_s3_matched_v1)
 
 all with T = 3000, rho = eta = 0.05 and B_out = 4. Scenario 3 builds a ZDD with about one
-million nodes, which takes several minutes.
+million nodes (about 16 GB peak memory) and takes about 3 minutes on 32 cores.
 
     python scripts/regression_check.py s1 s2 [s3_hl] [--K 3]
 """

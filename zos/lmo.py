@@ -21,8 +21,6 @@ from .zdd import ZDD
 class ShortestPathLMO:
     """Exact LMO for s-t paths via Dijkstra's algorithm (NetworkX)."""
 
-    stochastic = False
-
     def __init__(self, graph: nx.Graph, edges: Sequence[tuple[int, int]], source: int, target: int):
         self.graph, self.source, self.target, self.n = graph, source, target, len(edges)
         self._index = {}
@@ -47,8 +45,6 @@ class ShortestPathLMO:
 class ZDDLMO:
     """Exact LMO by minimum-weight root-to-TRUE path in the ZDD."""
 
-    stochastic = False
-
     def __init__(self, zdd: ZDD):
         self.zdd, self.n = zdd, zdd.n
 
@@ -62,8 +58,6 @@ class ZDDLMO:
 
 class SampledLMO:
     """Subsampled oracle LMO_m: draw m strategies with ``sampler`` and return the cheapest."""
-
-    stochastic = True
 
     def __init__(self, sampler: ZDDSampler, m: int):
         self.sampler, self.m, self.n = sampler, int(m), sampler.zdd.n

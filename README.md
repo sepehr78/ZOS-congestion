@@ -68,8 +68,9 @@ python scripts/run_zos.py --scenario 1 --seed 0 --out runs/s1_seed0.npz --certif
 
 Use `--oracle {exact,US,UL,HL}` and `--m` to change the inner oracle, and `--K`, `--T`, `--rho`,
 `--eta` and `--B-out` to change the settings. Thread count follows `--threads` or `OMP_NUM_THREADS`.
-A full Scenario 1 run takes about an hour on 4 cores; Scenario 3 builds a ZDD with about 10^6
-nodes (several minutes) and is best run on 16 or more cores.
+A full Scenario 1 run takes 30–60 minutes on 4 cores. Scenario 3 builds a ZDD with about 10^6
+nodes (under a minute on a recent Xeon, about 16 GB peak memory inside Graphillion) and is best
+run on 16 or more cores (about 25 s per outer iteration on 32 cores).
 
 The certified social cost is F(theta, y*) with the follower re-solved by fully corrective
 Frank-Wolfe with an exact LMO until the exact FW gap is at most 1e-8. `--certify` reports it for

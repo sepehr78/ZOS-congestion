@@ -1,6 +1,6 @@
 """The package reproduces the paper's Scenario 1 and 2 trajectories (one outer update, T = 3000).
 
-Scenario 3 (HL, m = 1000) needs a ~10^6-node ZDD; run ``scripts/regression_check.py s3_hl`` on a
+Scenario 3 (HL, m = 1000) needs a ~10^6-node ZDD (about 16 GB to build); run ``scripts/regression_check.py s3_hl`` on a
 machine with several cores instead.
 """
 
