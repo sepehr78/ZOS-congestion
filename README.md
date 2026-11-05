@@ -43,3 +43,7 @@ The experiments use Rademacher directions with factor 1/(2ρ) and projected quer
   year      = {2026}
 }
 ```
+
+## License
+
+MIT. The TNTP network data are from the [Transportation Networks for Research](https://github.com/bstabler/TransportationNetworks) repository, which allows academic research use with attribution.

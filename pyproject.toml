@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "zos-congestion"
 version = "1.0.0"
+license = "MIT"
 description = "Zeroth-Order Stackelberg Control in Combinatorial Congestion Games (NeurIPS 2026)"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
